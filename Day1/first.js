@@ -28,3 +28,7 @@ console.log(a>1 || b<0);
 let c = "Akhilesh";
 console.log(c.toLowerCase());
 console.log(c.toUpperCase());
+
+
+
+let arr = [1, "Aaryan", 3, true, 5];
