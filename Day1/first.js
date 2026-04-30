@@ -49,3 +49,18 @@ arr2.forEach(function(x) {
 arr2.map(function(x) {
     console.log("Element after * 2 ", x, ":", x * 10);
 });
+
+
+
+let option = "B";
+
+switch(option) {
+    case "A":
+        console.log("Option is A");
+        break;
+    case "B":
+        console.log("Option is B");
+        break;  
+    default:
+        console.log("Invalid option");
+}
