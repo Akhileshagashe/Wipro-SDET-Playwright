@@ -1,0 +1,96 @@
+Synopsis
+
+--------------------------------------------------Day - 1-----------------------------------------------------------------------------
+
+// Arithmatic Operations
+
+console.log(a+b);
+console.log(a-b);
+console.log(a*b);
+console.log(a/b);
+console.log(a%b);
+
+// Relational operators
+
+console.log(a>b);
+console.log(a<b);
+console.log(a>=b);
+console.log(a<=b);
+console.log(a==b);
+console.log(a!=b);
+
+//Logical operators
+
+console.log(a>1 && b>1);
+console.log(a>1 || b<0);
+
+// String operations
+
+let c = "Akhilesh";
+console.log(c.toLowerCase());
+console.log(c.toUpperCase());
+
+
+// forEach and map function 
+
+arr2.forEach(function(x) {
+    console.log("Element after * 2 ", x, ":", x * 5);
+});
+arr2.map(function(x) {
+    console.log("Element after * 2 ", x, ":", x * 10);
+});
+
+
+// switch case 
+
+let option = "B";
+switch(option) {
+    case "A":
+        console.log("Option is A");
+        break;
+    case "B":
+        console.log("Option is B");
+        break;  
+    default:
+        console.log("Invalid option");
+}
+
+
+// typeOf  
+
+let a = "5";
+console.log(typeOf(a));   ==> This is used to find the type of the data 
+
+
+--------------------------------------------------Day - 2-----------------------------------------------------------------------------
+
+
+// String Literals
+
+let name = "Akhilesh Agashe";
+console.log(`My name is ${name}`);   ==> these are used to write statements without using concatination or adding seperately each time
+
+
+function table(num) {
+    let result = "";
+    for (let i = 1; i <= 10; i++) {
+        // console.log(num + " x " + i + " = " + (num * i));             // Using string concatenation
+        // result += `${num} x ${i} = ${num * i}\n`;
+        result += `${num} * ${i} = ${num*i} \t`                     // using template Literals
+    } 
+    return result;
+}
+console.log(table(5));
+
+
+// Arrow function 
+
+this is used to write the function code in a single line or less space making the code look cleaner and thus increasing the 
+readability of the code.
+
+let sum = (x,y) => x+y;                                  ==> using arrow function
+console.log("Sum of 5 and 10:",sum(5,10));
+
+let arr = [1,2,"Akhilesh",4,5];
+
+arr.filter(x => typeof x === "number").map(x => x*5).forEach(x => console.log(x)); 
