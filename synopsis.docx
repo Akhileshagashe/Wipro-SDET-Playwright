@@ -94,3 +94,95 @@ console.log("Sum of 5 and 10:",sum(5,10));
 let arr = [1,2,"Akhilesh",4,5];
 
 arr.filter(x => typeof x === "number").map(x => x*5).forEach(x => console.log(x)); 
+
+
+// random function
+
+Math.random()  ==> this is used to generate a random value between 0 and 1.
+
+console.log(Math.floor(Math.random()*100)+1);    ==> this is used to get a random value between 0 and 100.
+
+
+// floor and ceil 
+
+---> Floor function   is used to get the lower bound value of a float value 
+
+    Math.floor(0.99999);  is 0
+    Math.floor(99.99);   is 99
+
+---> Ceil  function is used to get the upper bound value of a float value 
+
+    Math.ceil(0.9999);   is 1
+    Math.ceil(99.99);    is 100
+
+
+// typecasting
+
+string to Number 
+number to String
+
+
+let strnum = "5";
+console.log(Number(strnum));     ==> convert the string into number
+console.log(String(5));          ==> convert the number into string
+
+let val = "0.6";
+console.log(parseInt(val));        ==> 0, it will convert string into integer
+console.log(parseFloat(val));      ==> 0.6, it will convert string into float
+
+
+
+// Array Operations
+
+
+let colors = ["red", "green", "blue"];
+console.log(colors.indexOf("yellow")); // -1
+console.log(colors.includes("yellow")); // false
+console.log(colors.length); // 3
+console.log(colors[3]); // undefined
+console.log(colors[colors.length - 1]); // "blue"
+colors.push("yellow"); // Adds "yellow" to the end of the array
+console.log(colors); // ["red", "green", "blue", "yellow"]
+colors.pop(); // Removes the last element ("yellow")
+console.log(colors); // ["red", "green", "blue"]
+colors.unshift("purple"); // Adds "purple" to the beginning of the array
+console.log(colors); // ["purple", "red", "green", "blue"]
+colors.shift(); // Removes the first element ("purple")
+console.log(colors); // ["red", "green", "blue"]
+// [red] [green] [blue] --> undefined
+
+
+// let indexOf = "yellow";
+// for (let i = 0; i < colors.length; i++) {
+//     if(colors[i] === indexOf) {
+//         return i;
+//     } if(i == colors.length - 1) {
+//         return -1;
+//     }
+// }
+
+
+// remove by index, obj, [1, length - 2] --> math.random() * (length - 2)
+console.log(colors.splice(0, 1));
+console.log(colors.splice(1, 2));
+console.log(colors.splice(1, 3));
+// console.log(colors.splice(Math.floor(Math.random() * (colors.length - 2)), 1));
+// let str = "Hello World";
+// console.log(str.slice(0, 5)); // "Hello"
+
+
+
+// Reduce function
+
+const prices = [10, 20, 30, 40, 50];
+const total = prices.reduce((acc, price) => acc + price, 0);
+console.log("Total price:", total);
+
+
+
+const colors = ["red", "green", "blue", "red", "red", "green", "purple"];
+const colorCount = colors.reduce((acc, color) => {
+    acc[color] = (acc[color] || 0) + 1;
+    return acc;
+}, {});
+console.log("Color count:", colorCount);
