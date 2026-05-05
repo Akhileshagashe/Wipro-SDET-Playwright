@@ -228,3 +228,52 @@ setInterval(() => {
 }, 5000);
 Runs continuously
 Executes every 5 seconds (5000 ms)
+
+
+
+// Asynchronous Programming
+
+Promise Creation: 
+- new Promise((resolve, reject) =>{})
+    
+2. Async:
+- TimerFunction (setTimeOut()) is used to delay execution.
+
+3. Resolving the Promise
+- resolve("Data received")
+- it moves promise to fulfilled state.
+
+4. then():
+- handles successful result
+
+5. catch():
+- handles errors (rejected state).
+
+6. promise:
+new Promise((resolve, reject) => {
+// async task
+})
+resolve - success
+reject - error
+
+7. Promise States
+Pending - initial state
+Fulfilled - resolved successfully
+Rejected - error occurred
+
+8. then(): promise.then(result => {
+    console.log(result);
+    })
+- handles success result
+
+9. catch(): promise.catch((error)=>{
+    console.log(error);
+    })
+- handles error
+
+10. setTimeOut(): Used to delay execution
+
+11. fetch("https://api.example.com/data")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));

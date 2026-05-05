@@ -71,7 +71,7 @@ fetch("http://universities.hipolabs.com/search?country=India")
 
 
 //9  Quotes — Quotable
- fetch("https://zenquotes.io/api/quotes")
+fetch("https://zenquotes.io/api/quotes")
 .then(r => r.json())
 .then(arr => arr.filter(q => q.q.length < 100))
 .then(arr => arr.map(q => q.q))
