@@ -277,3 +277,87 @@ Rejected - error occurred
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log(error));
+
+
+
+---------------------------------------------------------------DAY - 5---------------------------------------------------------------------------
+
+
+
+#Conversion  JSON -> String
+JSON.stringify(obj)
+
+#Conversion  String -> JSON
+JSON.parse('{"name":"Aaryan","age":25,"city":"New York"}')
+
+
+
+#ClearTimeout
+clearTimeout(timeoutId)
+
+#ClearInterval 
+clearInterval(i);
+
+
+
+#Async await
+
+async function name(){
+    await fetch("https://jsonplaceholder.typicode.com/todos" )
+}
+
+
+
+#OOPS Concept
+1- Inheritance
+class Child extends Parents
+constructor(name, role) {
+        super(name); 
+        this.role = role;
+    }
+
+
+2- Encapsulation
+deposit(amount){
+        if(amount > 0){
+            this.#balance += amount;
+        
+        console.log(`Deposited : ${amount}. Current Balance : ${this.#balance}`);
+        } else{
+            console.log("Deposit amount must be positive.")
+        }
+    }
+
+    withdraw(amount){
+        if(amount > 0 && amount <= this.#balance){
+            this.#balance -= amount;
+
+            console.log(`Withdraw : ${amount} . Current Balance: ${this.#balance}`);
+        }else{
+            console.log("withdrawal amount must be positive and less than or equal to the current balance");
+        }
+    }
+
+
+3- Polymorphism
+const shapes = [new Circle(), new Square()];
+
+shapes.forEach(shape => shape.draw());
+
+
+
+
+4-Abstraction
+Hiding detailed implementation
+
+  #boilWater() {
+        return `Boiling water to ${this.#waterTemperature} degrees.`;
+    }
+ 
+    #grindBeans() {
+        return "Grinding beans.";
+    }
+
+# Private variable
+
+# --> used for making private variables
