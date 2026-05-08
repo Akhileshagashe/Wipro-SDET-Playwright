@@ -1,62 +1,57 @@
-function greetUser(name, callback) {
-    console.log('Hello ' + name);
-    callback();
+// console.log(greet);
+// let greet = "Hello, World!";
+// console.log(greet);
+ 
+// var greet; --> init -> undefined
+// log()
+// greet = "h W"
+// log()
+ 
+// sayHi();
+// function sayHi() {
+//     console.log('Hello, World!');
+// }
+ 
+// var sayHi = () => {
+//     console.log('Hello');
+// }
+ 
+// Every object --> Object
+const car = {
+    brand: "Tesla",
+    start: () => console.log("VroomVroom")
 }
  
-function sayGoodbye() {
-    console.log('Goodbye!');
+ 
+function start() {
+    console.log("VroomVroom")
 }
  
-greetUser('Aryan', sayGoodbye);
+const c1 = new start();
+const c2 = new start();
  
-function doforeach(e) {
+start.prototype.stop = function() {
+    console.log("Stop");
+}
+// c1.stop();
+// c2.stop();
+ 
+// car {start} --> prototype {stop}
+// c1 --> start
+// c2 --> start
+// c1.stop();
+ 
+const animal = { eats: true };
+const rabbit = Object.create(animal); // creates a new object rabbit with prototype animal
+rabbit.carrot = () => console.log("He is eating carrot");
+console.log(rabbit.eats); // inherted from animal
+console.log(rabbit.hasOwnProperty('eats'))
+console.log(rabbit.hasOwnProperty('carrot'))
+console.log(rabbit.toString())
+ 
+const arr = [1, 2, 3, -1];
+arr.reverse();
+arr.sort();
+for(let e of arr) { // in -> index, of -> value
     console.log(e);
 }
- 
-const doeach = e => console.log(e);
-[1, 2, 3].forEach(doeach); // callback | forEach is a higher order function (HOF)
-[1, 2, 3].forEach(e => console.log(e)); // anonymous callback
- 
-// Stack --> box | | --> 1 | 2 | 3 --> 3 | 2 | 1 (LIFO)
-// Heap --> box | | --> doeach | sayGoodbye | greetUser
- 
- 
-let age = 25; // number --> Stack
-let name = "Aryan"; // string --> Stack
- 
-let user = { // object --> Heap
-    name: "Aryan",
-    age: 25
-}
- 
-// Primitve copy (Stack)
-let x = 5;
-let y = x; // copy of value of x is stored in y
- 
-// Refrence copy (Heap)
-let obj1 = { name: "Aryan" }; // heap
-let obj2 = obj1;
- 
-obj2.name = "Arush";
-console.log(obj1.name); // obj1 and obj2 are referencing the same object in heap, so change in obj2 reflects in obj1
- const a = [1, 2, 3];
-const b = [3, 4, 5];
- 
-let c = [...a, ...b, 10];
- 
-const obj = {
-    name: "Aaryan"
-}
-const obj3 = {
-    age: 25
-}
- 
-const obj4 = {...obj1, ...obj3};
-console.log(obj4)
-// for (let i = 0; i < a.length; i++) {
-//     c.push(a[i]);
-// }
-// for (let i = 0; i < b.length; i++) {
-//     c.push(b[i]);
-// }
-console.log(c)
