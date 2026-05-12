@@ -1,2 +1,3 @@
 node_modules
 package-lock.jsongit rm -r --cached Day10/exp/node_modules
+
