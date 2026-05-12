@@ -15,7 +15,7 @@
 // console.log(add(5, 10));
 
 
-Let name: string = "Aaryan";
+let name: string = "Aaryan";
 let result: number | string;
 result = 45;
 result = "success";
